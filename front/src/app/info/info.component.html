@@ -1,0 +1,9 @@
+<div class="w3-container w3-center">
+  <p>
+    Enter your NickName: 
+  </p>
+  <p>
+  <input [(ngModel)]="nick" (keyup.enter)="onEnterNick(nick)">
+  </p>
+  <button *ngIf = "(this.nick != undefine)" class="w3-btn w3-border w3-small w3-margin" (click) = "onEnterNick(this.nick)" routerLink="/chat" >Go to Chat!</button> 
+</div>

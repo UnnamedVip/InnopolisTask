@@ -1,0 +1,14 @@
+
+<div class="w3-container">
+    
+  <div class="w3-panel w3-border" style="min-height: 300px; max-height: 300px; overflow: auto" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+    <p class="w3-white" *ngFor ="let message of messagesArray"> 
+      <b class="w3-text-green">{{message.nick}}:</b> {{message.txt}}
+    </p>
+  </div>
+  
+  <input appAutofocus class="w3-input w3-border w3-border-blue" (keyup.enter)="sendMessage()" [(ngModel)]="mess" placeholder="your nick: {{nick}}">
+
+</div>
+
+
